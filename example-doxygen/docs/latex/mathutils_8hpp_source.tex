@@ -1,0 +1,76 @@
+\hypertarget{mathutils_8hpp_source}{}\doxysection{mathutils.\+hpp}
+\mbox{\hyperlink{mathutils_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_MATHUTILS\_HPP\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_MATHUTILS\_HPP\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceMathUtils}{MathUtils}}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{namespace\ }Base\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{MathFunc}}\ =\ std::function<double\ (\textcolor{keywordtype}{double})>;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{MathFuncGen}}\ =\ std::function<T\ (T)>;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}{MathErrorCode}}:\ std::uint32\_t\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}{E\_OK}}\ \ \ \ \ \ \ \ \ \ =\ 0x00,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}{E\_ERROR}}\ \ \ \ \ \ \ =\ 0x01,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}{E\_OVERFLOW}}\ \ \ \ =\ 0x02,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}{E\_UNDERFLOW}}\ \ \ =\ 0x04,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}{E\_NAN}}\ \ \ \ \ \ \ \ \ =\ 0x08,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}{E\_CONVERGENCE}}\ =\ 0x10,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}{E\_MAX\_ITER}}\ \ \ \ =\ 0x20\ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \};\ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMathUtils_1_1Base_1_1MathResult}{MathResult}}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMathUtils_1_1Base_1_1MathResult_a34d7a174fdb6a8ace3fff2fa7d43ee05}{result}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ ErrorCodecode\ \ \mbox{\hyperlink{structMathUtils_1_1Base_1_1MathResult_a1100d7bbaef7f1aa1f0159605d751f5c}{error\_code}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceMathUtils_1_1Solvers}{MathUtils::Solvers}}\{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Note:\ Nested\ namespaces\ are\ only\ available\ in\ C++17.}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespaceMathUtils_1_1Base}{MathUtils::Base}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{structMathUtils_1_1Base_1_1MathResult}{MathResult}}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{namespaceMathUtils_1_1Solvers_a8344f30567335607eb5b93893735fac6}{NewtonSolver}}(\mbox{\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{MathFunc}}\ fun,\ \mbox{\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{MathFunc}}\ dfun,\ \textcolor{keywordtype}{double}\ x0,\ \textcolor{keywordtype}{double}\ eps);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespaceMathUtils_1_1Solvers_a1246e6c5ed93ca1e44d76ec54fed56fd}{GenericNewtonSolver}}(\mbox{\hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{MathFuncGen<T>}}\ fun,\ \mbox{\hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{MathFuncGen<T>}}\ dfun,\ T\ x0,\ T\ eps)\ -\/>\ T;}
+\DoxyCodeLine{00112\ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceMathUtils_1_1Solvers_a281e598bf9fc6362c92a4b71098235bc}{clear\_screen}}();}
+\DoxyCodeLine{00117\ \ \ \ \ }
+\DoxyCodeLine{00118\ \}\ \textcolor{comment}{//\ -\/-\/-\/\ End\ of\ Namespace\ \ MathUtils::Solvers\ -\/-\/-\/-\///}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceMathUtils}{MathUtils}}\{}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMathUtils_1_1XYChart}{XYChart}}\{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMathUtils_1_1XYChart_a0ded76c4c566fe0225c58eebf9e012a5}{XYChart}}(\textcolor{keywordtype}{double}\ width,\ \textcolor{keywordtype}{double}\ length);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMathUtils_1_1XYChart_a251e5cd579d0d47948f1d4f76c7e2dd8}{\string~XYChart}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMathUtils_1_1XYChart_a625ee682427abc4125d2bfa0c0a6f0f0}{clear}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMathUtils_1_1XYChart_abb639d16a75e6375580e69ccccc2f5ef}{addCurve}}(\textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ x[],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ y[]);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMathUtils_1_1XYChart_abe905a2e1909bbe15ded217e73990fb5}{XYChart}}(Plotter\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMathUtils_1_1XYChart}{XYChart}}\&\ \mbox{\hyperlink{classMathUtils_1_1XYChart_a83e37643b535ca533f6f7400ee2cf2e3}{operator=}}(\mbox{\hyperlink{classMathUtils_1_1XYChart}{XYChart}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00163\ \ \ \ \ \};}
+\DoxyCodeLine{00164\ \ \ \ \ }
+\DoxyCodeLine{00165\ \ \ \ \ }
+\DoxyCodeLine{00166\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00181\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{mathutils_8hpp_a9648f234c2af7046fa9e5819794c4527}{daxpy}}(\textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keywordtype}{double}\ \textcolor{keyword}{const}*\ xs,\ \textcolor{keywordtype}{double}*\ ys,\ \textcolor{keywordtype}{double}\ alpha,\ \textcolor{keywordtype}{double}\ beta)\ -\/>\ void;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

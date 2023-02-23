@@ -1,0 +1,96 @@
+\hypertarget{namespaceMathUtils_1_1Base}{}\doxysection{Math\+Utils\+::Base Namespace Reference}
+\label{namespaceMathUtils_1_1Base}\index{MathUtils::Base@{MathUtils::Base}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMathUtils_1_1Base_1_1MathResult}{Math\+Result}}
+\begin{DoxyCompactList}\small\item\em Represents a math numerical result with an error code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\+Func}} = std\+::function$<$ double(double)$>$
+\begin{DoxyCompactList}\small\item\em Mathematical function of type double. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\using \mbox{\hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\+Func\+Gen}} = std\+::function$<$ T(T)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}{Math\+Error\+Code}} \+: std\+::uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}{E\+\_\+\+OK}} = 0x00
+, \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}{E\+\_\+\+ERROR}} = 0x01
+, \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}{E\+\_\+\+OVERFLOW}} = 0x02
+, \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}{E\+\_\+\+UNDERFLOW}} = 0x04
+, \newline
+\mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}{E\+\_\+\+NAN}} = 0x08
+, \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}{E\+\_\+\+CONVERGENCE}} = 0x10
+, \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}{E\+\_\+\+MAX\+\_\+\+ITER}} = 0x20
+ \}
+\begin{DoxyCompactList}\small\item\em Mathematical error code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}\label{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}} 
+\index{MathUtils::Base@{MathUtils::Base}!MathFunc@{MathFunc}}
+\index{MathFunc@{MathFunc}!MathUtils::Base@{MathUtils::Base}}
+\doxysubsubsection{\texorpdfstring{MathFunc}{MathFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceMathUtils_1_1Base_a655889e83691f7f82ec161684afa2c1f}{Math\+Utils\+::\+Base\+::\+Math\+Func}} = typedef std\+::function$<$double (double)$>$}
+
+
+
+Mathematical function of type double. 
+
+\mbox{\Hypertarget{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}\label{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}} 
+\index{MathUtils::Base@{MathUtils::Base}!MathFuncGen@{MathFuncGen}}
+\index{MathFuncGen@{MathFuncGen}!MathUtils::Base@{MathUtils::Base}}
+\doxysubsubsection{\texorpdfstring{MathFuncGen}{MathFuncGen}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+using \mbox{\hyperlink{namespaceMathUtils_1_1Base_a99755ccc9707a5ae2e93b4d9fbeb4391}{Math\+Utils\+::\+Base\+::\+Math\+Func\+Gen}} = typedef std\+::function$<$T (T)$>$}
+
+Generic math function 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Any float-\/point type such as float, double or long double \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}} 
+\index{MathUtils::Base@{MathUtils::Base}!MathErrorCode@{MathErrorCode}}
+\index{MathErrorCode@{MathErrorCode}!MathUtils::Base@{MathUtils::Base}}
+\doxysubsubsection{\texorpdfstring{MathErrorCode}{MathErrorCode}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2}{Math\+Utils\+::\+Base\+::\+Math\+Error\+Code}} \+: std\+::uint32\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Mathematical error code. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_OK@{E\_OK}!MathUtils::Base@{MathUtils::Base}}\index{MathUtils::Base@{MathUtils::Base}!E\_OK@{E\_OK}}}\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2aa02beabe6f35d74f47eb01520970b350}} 
+E\+\_\+\+OK&Bit 0 (value 0x00 or 0) not set =\texorpdfstring{$>$}{>} Means no error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_ERROR@{E\_ERROR}!MathUtils::Base@{MathUtils::Base}}\index{MathUtils::Base@{MathUtils::Base}!E\_ERROR@{E\_ERROR}}}\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a80e070750e5ff70ab6a0e04cf55b8d76}} 
+E\+\_\+\+ERROR&bit 0 (value 0x01 or 1) means that an error of any type happened \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_OVERFLOW@{E\_OVERFLOW}!MathUtils::Base@{MathUtils::Base}}\index{MathUtils::Base@{MathUtils::Base}!E\_OVERFLOW@{E\_OVERFLOW}}}\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af60e76e9f5ffc969b1946811a7397b46}} 
+E\+\_\+\+OVERFLOW&bit 1 (value 0x02 or 2) Overflow error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_UNDERFLOW@{E\_UNDERFLOW}!MathUtils::Base@{MathUtils::Base}}\index{MathUtils::Base@{MathUtils::Base}!E\_UNDERFLOW@{E\_UNDERFLOW}}}\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2afa96178e08af17a4ee3edebaec32d1af}} 
+E\+\_\+\+UNDERFLOW&bit 2 (value 0x04 or 4) Undeflow error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_NAN@{E\_NAN}!MathUtils::Base@{MathUtils::Base}}\index{MathUtils::Base@{MathUtils::Base}!E\_NAN@{E\_NAN}}}\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2ae57d4e2d3045c76993a1130ccf754924}} 
+E\+\_\+\+NAN&bit 3 (value 0x08 or 8) Not a number \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_CONVERGENCE@{E\_CONVERGENCE}!MathUtils::Base@{MathUtils::Base}}\index{MathUtils::Base@{MathUtils::Base}!E\_CONVERGENCE@{E\_CONVERGENCE}}}\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2a804ef965d3982007bc8b7c61813179c8}} 
+E\+\_\+\+CONVERGENCE&bit 4 (value 0x10 or 16) Root, series or algorithm result doesn\textquotesingle{}t converge. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\_MAX\_ITER@{E\_MAX\_ITER}!MathUtils::Base@{MathUtils::Base}}\index{MathUtils::Base@{MathUtils::Base}!E\_MAX\_ITER@{E\_MAX\_ITER}}}\mbox{\Hypertarget{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}\label{namespaceMathUtils_1_1Base_aac4088d82202217a0cea2b81ec0649a2af5d012c621ef34c94de8c173e861afcc}} 
+E\+\_\+\+MAX\+\_\+\+ITER&bit 5 (value 0x20 or 16) Maximum iterations reached \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,134 @@
+\hypertarget{classMathUtils_1_1XYChart}{}\doxysection{Math\+Utils\+::XYChart Class Reference}
+\label{classMathUtils_1_1XYChart}\index{MathUtils::XYChart@{MathUtils::XYChart}}
+
+
+Class for plotting cuves, equations and differential equations.  
+
+
+
+
+{\ttfamily \#include $<$mathutils.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMathUtils_1_1XYChart_a0ded76c4c566fe0225c58eebf9e012a5}{XYChart}} (double width, double length)
+\begin{DoxyCompactList}\small\item\em Construct plot object with a given dimension. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classMathUtils_1_1XYChart_a251e5cd579d0d47948f1d4f76c7e2dd8}{$\sim$\+XYChart}} ()=default
+\begin{DoxyCompactList}\small\item\em Class destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMathUtils_1_1XYChart_a625ee682427abc4125d2bfa0c0a6f0f0}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear chart. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMathUtils_1_1XYChart_abb639d16a75e6375580e69ccccc2f5ef}{add\+Curve}} (size\+\_\+t n, const double x\mbox{[}$\,$\mbox{]}, const double y\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Add curve x\mbox{[}i\mbox{]}, y\mbox{[}i\mbox{]} to chart. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMathUtils_1_1XYChart_abe905a2e1909bbe15ded217e73990fb5}{XYChart}} (Plotter const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMathUtils_1_1XYChart}{XYChart}} \& \mbox{\hyperlink{classMathUtils_1_1XYChart_a83e37643b535ca533f6f7400ee2cf2e3}{operator=}} (\mbox{\hyperlink{classMathUtils_1_1XYChart}{XYChart}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy-\/assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for plotting cuves, equations and differential equations. 
+
+\begin{DoxyAuthor}{Author}
+Ghost Author ~\newline
+ 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMathUtils_1_1XYChart_a0ded76c4c566fe0225c58eebf9e012a5}\label{classMathUtils_1_1XYChart_a0ded76c4c566fe0225c58eebf9e012a5}} 
+\index{MathUtils::XYChart@{MathUtils::XYChart}!XYChart@{XYChart}}
+\index{XYChart@{XYChart}!MathUtils::XYChart@{MathUtils::XYChart}}
+\doxysubsubsection{\texorpdfstring{XYChart()}{XYChart()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Math\+Utils\+::\+XYChart\+::\+XYChart (\begin{DoxyParamCaption}\item[{double}]{width,  }\item[{double}]{length }\end{DoxyParamCaption})}
+
+
+
+Construct plot object with a given dimension. 
+
+\begin{DoxyPrecond}{Precondition}
+The chart size must not be negative.
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Initial \doxylink{classMathUtils_1_1XYChart}{XYChart} width \\
+\hline
+{\em height} & Initial \doxylink{classMathUtils_1_1XYChart}{XYChart} length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMathUtils_1_1XYChart_a251e5cd579d0d47948f1d4f76c7e2dd8}\label{classMathUtils_1_1XYChart_a251e5cd579d0d47948f1d4f76c7e2dd8}} 
+\index{MathUtils::XYChart@{MathUtils::XYChart}!````~XYChart@{$\sim$XYChart}}
+\index{````~XYChart@{$\sim$XYChart}!MathUtils::XYChart@{MathUtils::XYChart}}
+\doxysubsubsection{\texorpdfstring{$\sim$XYChart()}{~XYChart()}}
+{\footnotesize\ttfamily virtual Math\+Utils\+::\+XYChart\+::$\sim$\+XYChart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Class destructor. 
+
+\mbox{\Hypertarget{classMathUtils_1_1XYChart_abe905a2e1909bbe15ded217e73990fb5}\label{classMathUtils_1_1XYChart_abe905a2e1909bbe15ded217e73990fb5}} 
+\index{MathUtils::XYChart@{MathUtils::XYChart}!XYChart@{XYChart}}
+\index{XYChart@{XYChart}!MathUtils::XYChart@{MathUtils::XYChart}}
+\doxysubsubsection{\texorpdfstring{XYChart()}{XYChart()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Math\+Utils\+::\+XYChart\+::\+XYChart (\begin{DoxyParamCaption}\item[{Plotter const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMathUtils_1_1XYChart_abb639d16a75e6375580e69ccccc2f5ef}\label{classMathUtils_1_1XYChart_abb639d16a75e6375580e69ccccc2f5ef}} 
+\index{MathUtils::XYChart@{MathUtils::XYChart}!addCurve@{addCurve}}
+\index{addCurve@{addCurve}!MathUtils::XYChart@{MathUtils::XYChart}}
+\doxysubsubsection{\texorpdfstring{addCurve()}{addCurve()}}
+{\footnotesize\ttfamily void Math\+Utils\+::\+XYChart\+::add\+Curve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n,  }\item[{const double}]{x\mbox{[}$\,$\mbox{]},  }\item[{const double}]{y\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Add curve x\mbox{[}i\mbox{]}, y\mbox{[}i\mbox{]} to chart. 
+
+\begin{DoxyPrecond}{Precondition}
+Precondition\+: the arrays x\mbox{[}\mbox{]} and y\mbox{[}\mbox{]} must have size n. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+There are no post conditions.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & array size \\
+\hline
+{\em x} & array of x-\/coordinates values \\
+\hline
+{\em y} & array of y-\/coordinates values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+Plot the curve compriseds of points P\mbox{[}i\mbox{]} = (X\mbox{[}i\mbox{]}, Y\mbox{[}i\mbox{]}), where i = 0, 1, 2... n -\/ 1. \mbox{\Hypertarget{classMathUtils_1_1XYChart_a625ee682427abc4125d2bfa0c0a6f0f0}\label{classMathUtils_1_1XYChart_a625ee682427abc4125d2bfa0c0a6f0f0}} 
+\index{MathUtils::XYChart@{MathUtils::XYChart}!clear@{clear}}
+\index{clear@{clear}!MathUtils::XYChart@{MathUtils::XYChart}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void Math\+Utils\+::\+XYChart\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clear chart. 
+
+Clear all drawings and plots in the chart area. \mbox{\Hypertarget{classMathUtils_1_1XYChart_a83e37643b535ca533f6f7400ee2cf2e3}\label{classMathUtils_1_1XYChart_a83e37643b535ca533f6f7400ee2cf2e3}} 
+\index{MathUtils::XYChart@{MathUtils::XYChart}!operator=@{operator=}}
+\index{operator=@{operator=}!MathUtils::XYChart@{MathUtils::XYChart}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMathUtils_1_1XYChart}{XYChart}} \& Math\+Utils\+::\+XYChart\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMathUtils_1_1XYChart}{XYChart}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy-\/assignment operator. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mathutils_8hpp}{mathutils.\+hpp}}\end{DoxyCompactItemize}
